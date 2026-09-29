@@ -8,7 +8,7 @@ import ProfitCenters from '@/pages/ProfitCenters';
 import AccountsPayable from '@/pages/AccountsPayable';
 import AccountsReceivable from '@/pages/AccountsReceivable';
 import PeriodAnalysis from '@/pages/PeriodAnalysis';
-import BdcProducts from '@/pages/BdcProducts';
+import Lineage from '@/pages/Lineage';
 import Analyst from '@/pages/Analyst';
 
 const PAGE_COMPONENTS: Record<string, React.FC> = {
@@ -19,7 +19,7 @@ const PAGE_COMPONENTS: Record<string, React.FC> = {
   'accounts-payable': AccountsPayable,
   'accounts-receivable': AccountsReceivable,
   'period-analysis': PeriodAnalysis,
-  'bdc-products': BdcProducts,
+  lineage: Lineage,
   analyst: Analyst,
 };
 

@@ -7,7 +7,7 @@ import {
   CreditCard,
   Calendar,
   Bot,
-  Database,
+  GitBranch,
   Check,
 } from 'lucide-react';
 import { useFilters } from '@/hooks/useFilters';
@@ -21,7 +21,7 @@ export type PageId =
   | 'accounts-payable'
   | 'accounts-receivable'
   | 'period-analysis'
-  | 'bdc-products'
+  | 'lineage'
   | 'analyst';
 
 export interface NavItem {
@@ -38,7 +38,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'accounts-payable', label: 'Accounts Payable', icon: Receipt },
   { id: 'accounts-receivable', label: 'Accounts Receivable', icon: CreditCard },
   { id: 'period-analysis', label: 'Period Analysis', icon: Calendar },
-  { id: 'bdc-products', label: 'BDC Data Products', icon: Database },
+  { id: 'lineage', label: 'BDC Sources & Lineage', icon: GitBranch },
   { id: 'analyst', label: 'Cortex Analyst', icon: Bot },
 ];
 

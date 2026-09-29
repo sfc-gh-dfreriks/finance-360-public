@@ -118,6 +118,11 @@ export function fetchPeriodAnalysis(cc: string[], fy: string[]) {
   return getFiltered<any>('/period-analysis', 'period-analysis', cc, fy);
 }
 
+export async function fetchLineage(): Promise<any> {
+  if (STATIC) return camelizeKeys(await loadStaticFile('lineage'));
+  return liveGet('/lineage');
+}
+
 export async function fetchAnalyst(messages: { role: string; content: string }[]) {
   const base = STATIC ? AGENT_BASE : API_BASE;
   const res = await fetch(`${base}/analyst`, {
