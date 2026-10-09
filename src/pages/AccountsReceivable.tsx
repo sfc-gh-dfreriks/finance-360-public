@@ -6,7 +6,7 @@ import { formatDollar, formatPct, formatNumber } from '@/lib/utils';
 import MetricCard, { DollarSign, Calendar, TrendingUp, CreditCard, Activity, TrendingDown } from '@/components/MetricCard';
 import ChartCard from '@/components/ChartCard';
 import DataTable from '@/components/DataTable';
-import ReactECharts from 'echarts-for-react';
+import ReactECharts from '@/components/Chart';
 
 const PALETTE = ['#06b6d4', '#8b5cf6', '#f59e0b', '#10b981', '#ef4444', '#3b82f6', '#ec4899'];
 const AGING_ORDER = ['Current', '1-30 Days', '31-60 Days', '61-90 Days', '91-120 Days', '120+ Days'];
