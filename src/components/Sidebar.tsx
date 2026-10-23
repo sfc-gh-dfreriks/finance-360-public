@@ -9,11 +9,13 @@ import {
   Bot,
   GitBranch,
   Check,
+  Sparkles,
 } from 'lucide-react';
 import { useFilters } from '@/hooks/useFilters';
 import { cn } from '@/lib/utils';
 
 export type PageId =
+  | 'ask-cortex'
   | 'overview'
   | 'general-ledger'
   | 'cost-centers'
@@ -31,6 +33,7 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
+  { id: 'ask-cortex', label: 'Ask Cortex', icon: Sparkles },
   { id: 'overview', label: 'Executive Overview', icon: LayoutDashboard },
   { id: 'general-ledger', label: 'General Ledger', icon: BookOpen },
   { id: 'cost-centers', label: 'Cost Centers', icon: PieChart },
