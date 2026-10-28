@@ -6,7 +6,6 @@ import {
   Receipt,
   CreditCard,
   Calendar,
-  Bot,
   GitBranch,
   Check,
   Sparkles,
@@ -23,8 +22,7 @@ export type PageId =
   | 'accounts-payable'
   | 'accounts-receivable'
   | 'period-analysis'
-  | 'lineage'
-  | 'analyst';
+  | 'lineage';
 
 export interface NavItem {
   id: PageId;
@@ -34,7 +32,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'ask-cortex', label: 'Ask Cortex', icon: Sparkles },
-  { id: 'overview', label: 'Executive Overview', icon: LayoutDashboard },
+  { id: 'overview', label: 'Executive Dashboard', icon: LayoutDashboard },
   { id: 'general-ledger', label: 'General Ledger', icon: BookOpen },
   { id: 'cost-centers', label: 'Cost Centers', icon: PieChart },
   { id: 'profit-centers', label: 'Profit Centers', icon: TrendingUp },
@@ -42,7 +40,6 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'accounts-receivable', label: 'Accounts Receivable', icon: CreditCard },
   { id: 'period-analysis', label: 'Period Analysis', icon: Calendar },
   { id: 'lineage', label: 'BDC Sources & Lineage', icon: GitBranch },
-  { id: 'analyst', label: 'Cortex Analyst', icon: Bot },
 ];
 
 interface SidebarProps {

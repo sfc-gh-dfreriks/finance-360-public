@@ -9,7 +9,6 @@ import AccountsPayable from '@/pages/AccountsPayable';
 import AccountsReceivable from '@/pages/AccountsReceivable';
 import PeriodAnalysis from '@/pages/PeriodAnalysis';
 import Lineage from '@/pages/Lineage';
-import Analyst from '@/pages/Analyst';
 import AskCortexPage from '@/pages/AskCortexPage';
 import AskCortex from '@/components/AskCortex';
 
@@ -34,7 +33,6 @@ const PAGE_COMPONENTS: Record<string, React.FC> = {
   'accounts-receivable': AccountsReceivable,
   'period-analysis': PeriodAnalysis,
   lineage: Lineage,
-  analyst: Analyst,
 };
 
 function AppShell() {
