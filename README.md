@@ -2,8 +2,8 @@
 
 A static, no-login public build of the SAP BDC Finance 360 dashboard, deployed to
 GitHub Pages. Dashboards render from a **point-in-time data snapshot** (no Snowflake
-connection, no credentials in the browser). The optional "Ask the Agent" page calls a
-separate serverless Cortex agent (Cloudflare Worker) when configured.
+connection, no credentials in the browser). The app opens on
+Executive Dashboard; Ask Cortex is the first sidebar page.
 
 ## How it works
 
@@ -21,10 +21,9 @@ separate serverless Cortex agent (Cloudflare Worker) when configured.
   # from the finance_dashboard_react monorepo, with the server running:
   EXPORT_BASE=http://localhost:3002 node scripts/export-static.mjs
   ```
-- **Live agent (optional):** set the repo variable `AGENT_URL` to a deployed Cortex
-  agent Worker URL. The build injects it as `VITE_AGENT_URL`; the Analyst page then
-  POSTs to `<AGENT_URL>/analyst`. If unset, the agent page is non-functional but the
-  dashboards work fully.
+- **`AGENT_URL` (legacy):** the build still injects this repo variable as
+  `VITE_AGENT_URL`, but the in-app agent/Analyst page has been removed, so nothing in
+  the UI calls it. The dashboards and baked Ask Cortex answers need no agent.
 
 ## Local build
 
